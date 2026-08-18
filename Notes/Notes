@@ -1,0 +1,28 @@
+# Testing Methodology
+
+## 1. Lab Identification
+The assessment was performed in an intentionally vulnerable PortSwigger Web Security Academy laboratory.
+
+## 2. Request Analysis
+Burp Suite was used to intercept and analyse the application's stock-check HTTP request.
+
+## 3. Parameter Testing
+The `storeId` parameter was tested to determine whether user-controlled input could influence the underlying SQL query.
+
+## 4. SQL Injection Validation
+SQL expressions were submitted and the application's responses were compared to determine whether SQL Injection was present.
+
+## 5. Filter Analysis
+A UNION-based SQL Injection test resulted in an "Attack detected" response, indicating that input filtering was detecting the attempted payload.
+
+## 6. Filter Bypass Investigation
+XML entity encoding was investigated as part of the controlled laboratory exercise to understand how input filtering could be bypassed.
+
+## 7. Evidence Collection
+Screenshots were captured throughout the assessment to document requests, responses, testing results, and the completed laboratory objective.
+
+## 8. Impact Assessment
+The potential security impact of the identified vulnerability was assessed based on what an attacker could achieve if the weakness existed in a real application.
+
+## 9. Remediation
+Recommendations were documented to help prevent SQL Injection, including parameterized queries/prepared statements and appropriate input validation.
